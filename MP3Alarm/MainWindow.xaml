@@ -1,0 +1,20 @@
+﻿<Window x:Class="MP3Alarm.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit/extended"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MP3Alarm by Nirodha Software" Height="440" Width="511" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Icon="/MP3Alarm;component/Images/ClockIcon.ico" StateChanged="Window_StateChanged" Closing="Window_Closing">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="104*" />
+            <ColumnDefinition Width="385*" />
+        </Grid.ColumnDefinitions>
+        <Image Width="48" Height="48" HorizontalAlignment="Left" Margin="28,40,0,0" Name="image1" Stretch="UniformToFill" VerticalAlignment="Top"  Source="/MP3Alarm;component/Images/MusicIcon.jpg" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="32,49,0,0" Name="filePath" VerticalAlignment="Top" Width="237" Grid.Column="1" IsReadOnly="True" />
+        <Button Content="Browse..." Height="23" HorizontalAlignment="Left" Margin="275,49,0,0" Click="browseButton_Click" Name="browseButton" VerticalAlignment="Top" Width="75" Grid.Column="1" />
+        <Image Width="48" Height="48" HorizontalAlignment="Left" Margin="28,125,0,0" Name="image2" Stretch="Uniform" VerticalAlignment="Top" Source="/MP3Alarm;component/Images/ClockIcon.png" />
+        <Calendar Height="170" HorizontalAlignment="Left" Margin="32,125,0,0" Name="calendar1" VerticalAlignment="Top" Width="180" Grid.Column="1" />
+        <toolkit:DateTimeUpDown Name="alarmtime" Value="8:00 AM" Format="ShortTime" Margin="241,200,35,0" Grid.Column="1" Height="23
+                                " VerticalAlignment="Top" />
+        <Button Content="Set Alarm" Height="23" HorizontalAlignment="Center" Margin="80,337,184,0" Click="button1_Click" Name="button1" VerticalAlignment="Top" Width="120" Grid.Column="1" />
+    </Grid>
+</Window>
